@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".coinDetails.CoinDetailsFragment">
+
+    <ImageView
+        android:id="@+id/imageViewDetails"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewDetails">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/editTextID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewIDDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/editTextID"
+                app:layout_constraintStart_toEndOf="@id/editTextID"
+                app:layout_constraintTop_toTopOf="@id/editTextID" />
+
+            <TextView
+                android:id="@+id/textViewContentCreatedOn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/contentcreatedon"
+                app:layout_constraintStart_toStartOf="@id/editTextID"
+                app:layout_constraintTop_toBottomOf="@id/editTextID" />
+
+            <TextView
+                android:id="@+id/textViewContentCreatedOnDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewContentCreatedOn"
+                app:layout_constraintStart_toEndOf="@id/textViewContentCreatedOn"
+                app:layout_constraintTop_toTopOf="@id/textViewContentCreatedOn" />
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="@id/textViewContentCreatedOn"
+                app:layout_constraintTop_toBottomOf="@id/textViewContentCreatedOn" />
+
+            <TextView
+                android:id="@+id/textViewNameDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewName"
+                app:layout_constraintStart_toEndOf="@id/textViewName"
+                app:layout_constraintTop_toTopOf="@id/textViewName" />
+
+            <TextView
+                android:id="@+id/textViewSymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/symbol"
+                app:layout_constraintStart_toStartOf="@id/textViewName"
+                app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+            <TextView
+                android:id="@+id/textViewSymbolDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewSymbol"
+                app:layout_constraintStart_toEndOf="@id/textViewSymbol"
+                app:layout_constraintTop_toTopOf="@id/textViewSymbol" />
+
+            <View
+                android:id="@+id/textViewCoinNameHolder"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textViewSymbol"
+                app:layout_constraintTop_toBottomOf="@id/textViewSymbol" />
+
+            <TextView
+                android:id="@+id/textViewCoinName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/coinname"
+                app:layout_constraintBottom_toBottomOf="@id/textViewCoinNameHolder"
+                app:layout_constraintStart_toStartOf="@id/textViewCoinNameHolder"
+                app:layout_constraintTop_toTopOf="@id/textViewCoinNameHolder" />
+
+            <TextView
+                android:id="@+id/textViewCoinNameDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewCoinNameHolder"
+                app:layout_constraintStart_toEndOf="@id/textViewCoinName"
+                app:layout_constraintTop_toTopOf="@id/textViewCoinNameHolder" />
+
+            <TextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/fullname"
+                app:layout_constraintStart_toStartOf="@id/textViewCoinNameHolder"
+                app:layout_constraintTop_toBottomOf="@id/textViewCoinNameHolder" />
+
+            <TextView
+                android:id="@+id/textViewFullNameDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewFullName"
+                app:layout_constraintStart_toEndOf="@id/textViewFullName"
+                app:layout_constraintTop_toTopOf="@id/textViewFullName" />
+
+            <LinearLayout
+                android:id="@+id/textViewDescritpionHolder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/textViewFullName"
+                app:layout_constraintTop_toBottomOf="@id/textViewFullName">
+
+                <TextView
+                    android:id="@+id/textViewDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description" />
+
+                <TextView
+                    android:id="@+id/textViewDescriptionDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textViewAssetTokenStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/assettokenstatus"
+                app:layout_constraintStart_toStartOf="@id/textViewDescritpionHolder"
+                app:layout_constraintTop_toBottomOf="@id/textViewDescritpionHolder" />
+
+            <TextView
+                android:id="@+id/textViewAssetTokenStatusDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewAssetTokenStatus"
+                app:layout_constraintStart_toEndOf="@id/textViewAssetTokenStatus"
+                app:layout_constraintTop_toTopOf="@id/textViewAssetTokenStatus" />
+
+            <TextView
+                android:id="@+id/textViewAlgorithm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/algorithm"
+                app:layout_constraintStart_toStartOf="@id/textViewAssetTokenStatus"
+                app:layout_constraintTop_toBottomOf="@id/textViewAssetTokenStatus" />
+
+            <TextView
+                android:id="@+id/textViewAlgorithmDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewAlgorithm"
+                app:layout_constraintStart_toEndOf="@id/textViewAlgorithm"
+                app:layout_constraintTop_toTopOf="@id/textViewAlgorithm" />
+
+            <TextView
+                android:id="@+id/textViewProofType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/prooftype"
+                app:layout_constraintStart_toStartOf="@id/textViewAlgorithm"
+                app:layout_constraintTop_toBottomOf="@id/textViewAlgorithm" />
+
+            <TextView
+                android:id="@+id/textViewProofTypeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewProofType"
+                app:layout_constraintStart_toEndOf="@id/textViewProofType"
+                app:layout_constraintTop_toTopOf="@id/textViewProofType" />
+
+            <TextView
+                android:id="@+id/textViewSortOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/sortorder"
+                app:layout_constraintStart_toStartOf="@id/textViewProofType"
+                app:layout_constraintTop_toBottomOf="@id/textViewProofType" />
+
+            <TextView
+                android:id="@+id/textViewSortOrderDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewSortOrder"
+                app:layout_constraintStart_toEndOf="@id/textViewSortOrder"
+                app:layout_constraintTop_toTopOf="@id/textViewSortOrder" />
+
+            <TextView
+                android:id="@+id/textViewSponsored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/sponsored"
+                app:layout_constraintStart_toStartOf="@id/textViewSortOrder"
+                app:layout_constraintTop_toBottomOf="@id/textViewSortOrder" />
+
+            <TextView
+                android:id="@+id/textViewSponsoredDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewSponsored"
+                app:layout_constraintStart_toEndOf="@id/textViewSponsored"
+                app:layout_constraintTop_toTopOf="@id/textViewSponsored" />
+
+            <TextView
+                android:id="@+id/textViewAccess"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/access"
+                app:layout_constraintStart_toStartOf="@id/textViewSponsored"
+                app:layout_constraintTop_toBottomOf="@id/textViewSponsored" />
+
+            <TextView
+                android:id="@+id/textViewAccessDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewAccess"
+                app:layout_constraintStart_toEndOf="@id/textViewAccess"
+                app:layout_constraintTop_toTopOf="@id/textViewAccess" />
+
+            <TextView
+                android:id="@+id/textViewFCA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/fca"
+                app:layout_constraintStart_toStartOf="@id/textViewAccess"
+                app:layout_constraintTop_toBottomOf="@id/textViewAccess" />
+
+            <TextView
+                android:id="@+id/textViewFCADetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewFCA"
+                app:layout_constraintStart_toEndOf="@id/textViewFCA"
+                app:layout_constraintTop_toTopOf="@id/textViewFCA" />
+
+            <TextView
+                android:id="@+id/textViewFINMA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/finma"
+                app:layout_constraintStart_toStartOf="@id/textViewFCA"
+                app:layout_constraintTop_toBottomOf="@id/textViewFCA" />
+
+            <TextView
+                android:id="@+id/textViewFINMADetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewFINMA"
+                app:layout_constraintStart_toEndOf="@id/textViewFINMA"
+                app:layout_constraintTop_toTopOf="@id/textViewFINMA" />
+
+            <TextView
+                android:id="@+id/textViewIndustry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/industry"
+                app:layout_constraintStart_toStartOf="@id/textViewFINMA"
+                app:layout_constraintTop_toBottomOf="@id/textViewFINMA" />
+
+            <TextView
+                android:id="@+id/textViewIndustryDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewIndustry"
+                app:layout_constraintStart_toEndOf="@id/textViewIndustry"
+                app:layout_constraintTop_toTopOf="@id/textViewIndustry" />
+
+            <TextView
+                android:id="@+id/textViewCollateralizedAsset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/collateralizedasset"
+                app:layout_constraintStart_toStartOf="@id/textViewIndustry"
+                app:layout_constraintTop_toBottomOf="@id/textViewIndustry" />
+
+            <TextView
+                android:id="@+id/textViewCollateralizedAssetDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewCollateralizedAsset"
+                app:layout_constraintStart_toEndOf="@id/textViewCollateralizedAsset"
+                app:layout_constraintTop_toTopOf="@id/textViewCollateralizedAsset" />
+
+            <TextView
+                android:id="@+id/textViewCollateralizedAssetType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/collateralizedassettype"
+                app:layout_constraintStart_toStartOf="@id/textViewCollateralizedAsset"
+                app:layout_constraintTop_toBottomOf="@id/textViewCollateralizedAsset" />
+
+            <TextView
+                android:id="@+id/textViewCollateralizedAssetTypeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewCollateralizedAssetType"
+                app:layout_constraintStart_toEndOf="@id/textViewCollateralizedAssetType"
+                app:layout_constraintTop_toTopOf="@id/textViewCollateralizedAssetType" />
+
+            <TextView
+                android:id="@+id/textViewCollateralType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/collateraltype"
+                app:layout_constraintStart_toStartOf="@id/textViewCollateralizedAssetType"
+                app:layout_constraintTop_toBottomOf="@id/textViewCollateralizedAssetType" />
+
+            <TextView
+                android:id="@+id/textViewCollateralTypeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewCollateralType"
+                app:layout_constraintStart_toEndOf="@id/textViewCollateralType"
+                app:layout_constraintTop_toTopOf="@id/textViewCollateralType" />
+
+            <TextView
+                android:id="@+id/textViewCollateralInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/collateralinfo"
+                app:layout_constraintStart_toStartOf="@id/textViewCollateralType"
+                app:layout_constraintTop_toBottomOf="@id/textViewCollateralType" />
+
+            <TextView
+                android:id="@+id/textViewCollateralInfoDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewCollateralInfo"
+                app:layout_constraintStart_toEndOf="@id/textViewCollateralInfo"
+                app:layout_constraintTop_toTopOf="@id/textViewCollateralInfo" />
+
+            <TextView
+                android:id="@+id/textViewRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/rating"
+                app:layout_constraintStart_toStartOf="@id/textViewCollateralInfo"
+                app:layout_constraintTop_toBottomOf="@id/textViewCollateralInfo" />
+
+            <TextView
+                android:id="@+id/textViewRatingDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewRating"
+                app:layout_constraintStart_toEndOf="@id/textViewRating"
+                app:layout_constraintTop_toTopOf="@id/textViewRating" />
+
+            <TextView
+                android:id="@+id/textViewTechnologyAdoptionRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/technologyadoptionrating"
+                app:layout_constraintStart_toStartOf="@id/textViewRating"
+                app:layout_constraintTop_toBottomOf="@id/textViewRating" />
+
+            <TextView
+                android:id="@+id/textViewTechnologyAdoptionRatingDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewTechnologyAdoptionRating"
+                app:layout_constraintStart_toEndOf="@id/textViewTechnologyAdoptionRating"
+                app:layout_constraintTop_toTopOf="@id/textViewTechnologyAdoptionRating" />
+
+            <TextView
+                android:id="@+id/textViewMarketPerformanceRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/marketperformancerating"
+                app:layout_constraintStart_toStartOf="@id/textViewTechnologyAdoptionRating"
+                app:layout_constraintTop_toBottomOf="@id/textViewTechnologyAdoptionRating" />
+
+            <TextView
+                android:id="@+id/textViewMarketPerformanceRatingDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewMarketPerformanceRating"
+                app:layout_constraintStart_toEndOf="@id/textViewMarketPerformanceRating"
+                app:layout_constraintTop_toTopOf="@id/textViewMarketPerformanceRating" />
+
+            <TextView
+                android:id="@+id/textViewIsTrading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/istrading"
+                app:layout_constraintStart_toStartOf="@id/textViewMarketPerformanceRating"
+                app:layout_constraintTop_toBottomOf="@id/textViewMarketPerformanceRating" />
+
+            <TextView
+                android:id="@+id/textViewIsTradingDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewIsTrading"
+                app:layout_constraintStart_toEndOf="@id/textViewIsTrading"
+                app:layout_constraintTop_toTopOf="@id/textViewIsTrading" />
+
+            <TextView
+                android:id="@+id/textViewTotalCoinsMined"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/totalcoinsmined"
+                app:layout_constraintStart_toStartOf="@id/textViewIsTrading"
+                app:layout_constraintTop_toBottomOf="@id/textViewIsTrading" />
+
+            <TextView
+                android:id="@+id/textViewTotalCoinsMinedDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewTotalCoinsMined"
+                app:layout_constraintStart_toEndOf="@id/textViewTotalCoinsMined"
+                app:layout_constraintTop_toTopOf="@id/textViewTotalCoinsMined" />
+
+            <TextView
+                android:id="@+id/textViewCirculatingSupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/circulatingsupply"
+                app:layout_constraintStart_toStartOf="@id/textViewTotalCoinsMined"
+                app:layout_constraintTop_toBottomOf="@id/textViewTotalCoinsMined" />
+
+            <TextView
+                android:id="@+id/textViewCirculatingSupplyDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewCirculatingSupply"
+                app:layout_constraintStart_toEndOf="@id/textViewCirculatingSupply"
+                app:layout_constraintTop_toTopOf="@id/textViewCirculatingSupply" />
+
+            <TextView
+                android:id="@+id/textViewBlockNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/blocknumber"
+                app:layout_constraintStart_toStartOf="@id/textViewCirculatingSupply"
+                app:layout_constraintTop_toBottomOf="@id/textViewCirculatingSupply" />
+
+            <TextView
+                android:id="@+id/textViewBlockNumberDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewBlockNumber"
+                app:layout_constraintStart_toEndOf="@id/textViewBlockNumber"
+                app:layout_constraintTop_toTopOf="@id/textViewBlockNumber" />
+
+            <TextView
+                android:id="@+id/textViewNetHashesPerSecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/nethashespersecond"
+                app:layout_constraintStart_toStartOf="@id/textViewBlockNumber"
+                app:layout_constraintTop_toBottomOf="@id/textViewBlockNumber" />
+
+            <TextView
+                android:id="@+id/textViewNetHashesPerSecondDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewNetHashesPerSecond"
+                app:layout_constraintStart_toEndOf="@id/textViewNetHashesPerSecond"
+                app:layout_constraintTop_toTopOf="@id/textViewNetHashesPerSecond" />
+
+            <TextView
+                android:id="@+id/textViewBlockReward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/blockreward"
+                app:layout_constraintStart_toStartOf="@id/textViewNetHashesPerSecond"
+                app:layout_constraintTop_toBottomOf="@id/textViewNetHashesPerSecond" />
+
+            <TextView
+                android:id="@+id/textViewBlockRewardDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewBlockReward"
+                app:layout_constraintStart_toEndOf="@id/textViewBlockReward"
+                app:layout_constraintTop_toTopOf="@id/textViewBlockReward" />
+
+            <TextView
+                android:id="@+id/textViewBlockTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/blocktime"
+                app:layout_constraintStart_toStartOf="@id/textViewBlockReward"
+                app:layout_constraintTop_toBottomOf="@id/textViewBlockReward" />
+
+            <TextView
+                android:id="@+id/textViewBlockTimeDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewBlockTime"
+                app:layout_constraintStart_toEndOf="@id/textViewBlockTime"
+                app:layout_constraintTop_toTopOf="@id/textViewBlockTime" />
+
+            <TextView
+                android:id="@+id/textViewAssetLaunchDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/assetlaunchdate"
+                app:layout_constraintStart_toStartOf="@id/textViewBlockTime"
+                app:layout_constraintTop_toBottomOf="@id/textViewBlockTime" />
+
+            <TextView
+                android:id="@+id/textViewAssetLaunchDateDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewAssetLaunchDate"
+                app:layout_constraintStart_toEndOf="@id/textViewAssetLaunchDate"
+                app:layout_constraintTop_toTopOf="@id/textViewAssetLaunchDate" />
+
+            <TextView
+                android:id="@+id/textViewMaxSupply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/maxsupply"
+                app:layout_constraintStart_toStartOf="@id/textViewAssetLaunchDate"
+                app:layout_constraintTop_toBottomOf="@id/textViewAssetLaunchDate" />
+
+            <TextView
+                android:id="@+id/textViewMaxSupplyDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewMaxSupply"
+                app:layout_constraintStart_toEndOf="@id/textViewMaxSupply"
+                app:layout_constraintTop_toTopOf="@id/textViewMaxSupply" />
+
+            <TextView
+                android:id="@+id/textViewMktCapPenalty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/mktcappenalty"
+                app:layout_constraintStart_toStartOf="@id/textViewMaxSupply"
+                app:layout_constraintTop_toBottomOf="@id/textViewMaxSupply" />
+
+            <TextView
+                android:id="@+id/textViewMktCapPenaltyDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewMktCapPenalty"
+                app:layout_constraintStart_toEndOf="@id/textViewMktCapPenalty"
+                app:layout_constraintTop_toTopOf="@id/textViewMktCapPenalty" />
+
+            <TextView
+                android:id="@+id/textViewIsUsedInDefi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/isusedindefi"
+                app:layout_constraintStart_toStartOf="@id/textViewMktCapPenalty"
+                app:layout_constraintTop_toBottomOf="@id/textViewMktCapPenalty" />
+
+            <TextView
+                android:id="@+id/textViewIsUsedInDefiDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewIsUsedInDefi"
+                app:layout_constraintStart_toEndOf="@id/textViewIsUsedInDefi"
+                app:layout_constraintTop_toTopOf="@id/textViewIsUsedInDefi" />
+
+            <TextView
+                android:id="@+id/textViewIsUsedInNft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/isusedinnft"
+                app:layout_constraintStart_toStartOf="@id/textViewIsUsedInDefi"
+                app:layout_constraintTop_toBottomOf="@id/textViewIsUsedInDefi" />
+
+            <TextView
+                android:id="@+id/textViewIsUsedInNftDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/textViewIsUsedInNft"
+                app:layout_constraintStart_toEndOf="@id/textViewIsUsedInNft"
+                app:layout_constraintTop_toTopOf="@id/textViewIsUsedInNft" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
